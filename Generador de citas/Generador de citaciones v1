@@ -1,0 +1,20 @@
+#Recolección de datos
+raw_author = input("Autor: ")
+raw_title = input("Título: ")
+year = input("Año: ")
+raw_place = input("Lugar: ")
+current_year=input("Año actual: ")
+
+#Limpieza de los datos: eliminar espacios extra y capitalizar correctamente.
+author=raw_author.strip().title()
+title=raw_title.strip().title()
+place=raw_place.strip().title()
+
+#Calcular edad de la obra
+age=int(current_year) - int(year)
+
+#Generar cita
+apa = f"{author}. ({year}). *{title}*. {place}."
+mla = f"{author}. *{title}*. {year}."
+print(apa)
+print(f"Esta obra tiene {age} años de antigüedad.")
